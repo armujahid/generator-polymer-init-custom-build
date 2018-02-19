@@ -23,7 +23,7 @@ const imagemin = require('gulp-imagemin');
 // Before using each plugin, install with `npm i --save-dev <package-name>`
 // const uglify = require('gulp-uglify');
 // const cssSlam = require('css-slam').gulp;
-// const htmlMinifier = require('gulp-html-minifier');
+// const htmlMinifier = require('gulp-htmlmin');
 
 const swPrecacheConfig = require('./sw-precache-config.js');
 const polymerJson = require('./polymer.json');
@@ -73,7 +73,7 @@ function build() {
           // the require statements at the beginning.
           // .pipe(gulpif(/\.js$/, uglify())) // Install gulp-uglify to use
           // .pipe(gulpif(/\.css$/, cssSlam())) // Install css-slam to use
-          // .pipe(gulpif(/\.html$/, htmlMinifier())) // Install gulp-html-minifier to use
+          // .pipe(gulpif(/\.html$/, htmlMinifier())) // Install gulp-htmlmin to use
 
           // Remember, you need to rejoin any split inline code when you're done.
           .pipe(sourcesStreamSplitter.rejoin());
